@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : LMFE_1
+Version: K-2015.06-SP1
+Date   : Tue Nov 29 00:09:44 2016
+****************************************
+
+Library(s) Used:
+
+    slow (File: /theda21_2/CBDK_IC_Contest/cur/SynopsysDC/db/slow.db)
+    sram_1024x8_t13 (File: /users/student/mr105/wuhoward/IClab/syntest/sram_1024x8_t13_slow_syn.db)
+
+Number of ports:                          149
+Number of nets:                          3168
+Number of cells:                         2542
+Number of combinational cells:           2067
+Number of sequential cells:               467
+Number of macros/black boxes:               1
+Number of buf/inv:                        168
+Number of references:                      52
+
+Combinational area:              18812.283891
+Buf/Inv area:                      814.751987
+Noncombinational area:           15027.081692
+Macro/Black Box area:            69557.296875
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                103396.662457
+Total area:                 undefined

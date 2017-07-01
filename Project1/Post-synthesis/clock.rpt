@@ -1,0 +1,89 @@
+****************************************
+Report : clock
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock          Period   Waveform            Attrs     Sources
+-------------------------------------------------------------------------------
+clk             10.00   {0 5}                         {clk}
+
+1
+****************************************
+Report : port
+	-input_delay
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+
+                    Input Delay
+                  Min             Max       Related Related
+ Input Port    Rise   Fall    Rise    Fall   Clock   Pin
+------------------------------------------------------------
+Din[0]        5.00    5.00    5.00    5.00  clk       -- 
+Din[1]        5.00    5.00    5.00    5.00  clk       -- 
+Din[2]        5.00    5.00    5.00    5.00  clk       -- 
+Din[3]        5.00    5.00    5.00    5.00  clk       -- 
+Din[4]        5.00    5.00    5.00    5.00  clk       -- 
+Din[5]        5.00    5.00    5.00    5.00  clk       -- 
+Din[6]        5.00    5.00    5.00    5.00  clk       -- 
+Din[7]        5.00    5.00    5.00    5.00  clk       -- 
+clk           --      --      --      --      --      -- 
+in_en         5.00    5.00    5.00    5.00  clk       -- 
+reset         5.00    5.00    5.00    5.00  clk       -- 
+
+1
+****************************************
+Report : port
+	-output_delay
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+
+                   Output Delay
+                  Min             Max       Related Related
+ Output Port    Rise   Fall   Rise    Fall   Clock   Pin
+------------------------------------------------------------
+Dout[0]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[1]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[2]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[3]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[4]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[5]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[6]       0.50    0.50    0.50    0.50  clk       -- 
+Dout[7]       0.50    0.50    0.50    0.50  clk       -- 
+busy          0.50    0.50    0.50    0.50  clk       -- 
+out_valid     0.50    0.50    0.50    0.50  clk       -- 
+
+1
+Warning: Zero transition time will be used at to pins of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-066)
+Warning: Some timing arcs have been disabled for breaking timing loops
+	or because of constant propagation. Use the 'report_disable_timing'
+	command to get the list of these disabled timing arcs. (PTE-003)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+check_timing succeeded.
+1

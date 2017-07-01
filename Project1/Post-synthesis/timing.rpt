@@ -1,0 +1,220 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+
+
+
+
+
+   max_fanout
+
+                             Required        Actual
+   Pin                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   U2485/Y                     20.00         114.00         -94.00  (VIOLATED)
+   U2484/Y                     20.00          96.00         -76.00  (VIOLATED)
+   U2506/Y                     20.00          72.00         -52.00  (VIOLATED)
+   U2496/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2497/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2498/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2500/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2501/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2502/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2503/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2542/Y                     20.00          49.00         -29.00  (VIOLATED)
+   U2504/Y                     20.00          48.00         -28.00  (VIOLATED)
+   U2505/Y                     20.00          48.00         -28.00  (VIOLATED)
+   U2507/Y                     20.00          48.00         -28.00  (VIOLATED)
+   U2513/Y                     20.00          46.00         -26.00  (VIOLATED)
+   U2511/Y                     20.00          40.00         -20.00  (VIOLATED)
+   U2482/Y                     20.00          26.00          -6.00  (VIOLATED)
+   U2508/Y                     20.00          26.00          -6.00  (VIOLATED)
+   U2565/Y                     20.00          25.00          -5.00  (VIOLATED)
+   U2593/Y                     20.00          25.00          -5.00  (VIOLATED)
+   U4102/Y                     20.00          25.00          -5.00  (VIOLATED)
+   U4200/Y                     20.00          21.00          -1.00  (VIOLATED)
+
+
+Warning: Transition times on not annotated delay arcs havebeen set to zero. Cannot perform max_transition checking. (PTE-057)
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+
+  Startpoint: winx_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Raddr_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  winx_reg[3]/CK (DFFRX1)                  0.00       0.50 r
+  winx_reg[3]/QN (DFFRX1)                  0.62 *     1.12 f
+  U2512/Y (AOI211X1)                       0.59 *     1.71 r
+  U2510/Y (NAND2X2)                        0.26 *     1.96 f
+  U4154/Y (NOR2X1)                         0.38 *     2.34 r
+  U4155/Y (NAND2X1)                        0.26 *     2.60 f
+  U2481/Y (INVX1)                          0.30 *     2.90 r
+  U2665/Y (NAND2XL)                        0.32 *     3.21 f
+  U4163/Y (OAI21XL)                        0.35 *     3.56 r
+  U2689/Y (OAI211XL)                       0.31 *     3.88 f
+  U2470/Y (AOI211XL)                       0.51 *     4.39 r
+  U2522/Y (OAI21XL)                        0.29 *     4.69 f
+  U4168/Y (NAND2BX1)                       0.52 *     5.21 f
+  U2476/Y (AND2X2)                         0.36 *     5.57 f
+  U2472/Y (NAND2XL)                        0.65 *     6.22 r
+  U2514/Y (NOR2X2)                         0.31 *     6.54 f
+  U2475/Y (NAND2X1)                        0.41 *     6.95 r
+  U4183/Y (NOR2X1)                         0.32 *     7.27 f
+  U4187/Y (NAND2X1)                        0.41 *     7.68 r
+  U4617/Y (NOR2X1)                         0.26 *     7.94 f
+  U4660/CO (ADDFXL)                        0.62 *     8.56 f
+  U2473/Y (AND2X1)                         0.45 *     9.01 f
+  U2879/Y (NAND2XL)                        0.29 *     9.30 r
+  U2878/Y (OAI211XL)                       0.27 *     9.57 f
+  U2877/Y (OAI211XL)                       0.37 *     9.95 r
+  Raddr_reg[9]/D (DFFRX1)                  0.00 *     9.95 r
+  data arrival time                                   9.95
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock reconvergence pessimism            0.00      10.50
+  clock uncertainty                       -0.10      10.40
+  Raddr_reg[9]/CK (DFFRX1)                           10.40 r
+  library setup time                      -0.29 *    10.11
+  data required time                                 10.11
+  ---------------------------------------------------------------
+  data required time                                 10.11
+  data arrival time                                  -9.95
+  ---------------------------------------------------------------
+  slack (MET)                                         0.16
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-nets
+	-max_paths 1
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+
+  Startpoint: winx_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Raddr_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                           0.10       0.00       0.00
+  clock network delay (ideal)                                0.50       0.50
+  winx_reg[3]/CK (DFFRX1)                         0.10       0.00       0.50 r
+  winx_reg[3]/QN (DFFRX1)                         0.00       0.62 *     1.12 f
+  n4240 (net)                    6     0.07 
+  U2512/Y (AOI211X1)                              0.00       0.59 *     1.71 r
+  n2504 (net)                    2     0.03 
+  U2510/Y (NAND2X2)                               0.00       0.26 *     1.96 f
+  n2528 (net)                    3     0.04 
+  U4154/Y (NOR2X1)                                0.00       0.38 *     2.34 r
+  n2519 (net)                    2     0.02 
+  U4155/Y (NAND2X1)                               0.00       0.26 *     2.60 f
+  n2512 (net)                    2     0.02 
+  U2481/Y (INVX1)                                 0.00       0.30 *     2.90 r
+  n2520 (net)                    2     0.02 
+  U2665/Y (NAND2XL)                               0.00       0.32 *     3.21 f
+  n2516 (net)                    2     0.02 
+  U4163/Y (OAI21XL)                               0.00       0.35 *     3.56 r
+  n2514 (net)                    1     0.01 
+  U2689/Y (OAI211XL)                              0.00       0.31 *     3.88 f
+  n2524 (net)                    1     0.01 
+  U2470/Y (AOI211XL)                              0.00       0.51 *     4.39 r
+  n2525 (net)                    1     0.01 
+  U2522/Y (OAI21XL)                               0.00       0.29 *     4.69 f
+  n2534 (net)                    1     0.01 
+  U4168/Y (NAND2BX1)                              0.00       0.52 *     5.21 f
+  n2550 (net)                    4     0.05 
+  U2476/Y (AND2X2)                                0.00       0.36 *     5.57 f
+  n2537 (net)                    3     0.04 
+  U2472/Y (NAND2XL)                               0.00       0.65 *     6.22 r
+  n2541 (net)                    3     0.04 
+  U2514/Y (NOR2X2)                                0.00       0.31 *     6.54 f
+  n2546 (net)                    3     0.04 
+  U2475/Y (NAND2X1)                               0.00       0.41 *     6.95 r
+  n2560 (net)                    3     0.04 
+  U4183/Y (NOR2X1)                                0.00       0.32 *     7.27 f
+  n2568 (net)                    3     0.04 
+  U4187/Y (NAND2X1)                               0.00       0.41 *     7.68 r
+  n3833 (net)                    3     0.04 
+  U4617/Y (NOR2X1)                                0.00       0.26 *     7.94 f
+  n4009 (net)                    2     0.02 
+  U4660/CO (ADDFXL)                               0.00       0.62 *     8.56 f
+  n4016 (net)                    2     0.02 
+  U2473/Y (AND2X1)                                0.00       0.45 *     9.01 f
+  n4013 (net)                    3     0.04 
+  U2879/Y (NAND2XL)                               0.00       0.29 *     9.30 r
+  n4011 (net)                    1     0.01 
+  U2878/Y (OAI211XL)                              0.00       0.27 *     9.57 f
+  n4012 (net)                    1     0.01 
+  U2877/Y (OAI211XL)                              0.00       0.37 *     9.95 r
+  nextRaddr[9] (net)             1     0.01 
+  Raddr_reg[9]/D (DFFRX1)                         0.00       0.00 *     9.95 r
+  data arrival time                                                     9.95
+
+  clock clk (rise edge)                           0.10      10.00      10.00
+  clock network delay (ideal)                                0.50      10.50
+  clock reconvergence pessimism                              0.00      10.50
+  clock uncertainty                                         -0.10      10.40
+  Raddr_reg[9]/CK (DFFRX1)                                             10.40 r
+  library setup time                                        -0.29 *    10.11
+  data required time                                                   10.11
+  -----------------------------------------------------------------------------
+  data required time                                                   10.11
+  data arrival time                                                    -9.95
+  -----------------------------------------------------------------------------
+  slack (MET)                                                           0.16
+
+
+1
+****************************************
+Report : timing
+	-path_type summary
+	-delay_type max
+	-nworst 10
+	-slack_lesser_than 0.00
+	-max_paths 10
+	-sort_by slack
+Design : LMFE
+Version: K-2015.06-SP1
+Date   : Thu Dec  1 21:55:06 2016
+****************************************
+
+No paths with slack less than 0.00.
+
+1

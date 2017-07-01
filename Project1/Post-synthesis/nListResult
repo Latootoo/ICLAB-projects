@@ -1,0 +1,261 @@
+Total 6 Error(s), 210 Warning(s), 16 Information(s)
+    Compilation & Elaboration -1 Error(s)
+        16651 - view %s is not defined for instance %s(s) - 1 Error(s)
+            LMFE.v(47) : Error : view sram_1024x8_t13 is not defined for instance ram1
+    Naming Convention -15 Warning(s), 3 Information(s)
+        21001 - Signals names are lowercase letters(s) - 10 Warning(s)
+            LMFE.v(7) : Warning : signal "Din" should be named in CASE_LOWER case.
+            LMFE.v(8) : Warning : signal "Dout" should be named in CASE_LOWER case.
+            LMFE.v(12) : Warning : signal "Mout" should be named in CASE_LOWER case.
+            LMFE.v(28) : Warning : signal "Min" should be named in CASE_LOWER case.
+            LMFE.v(31) : Warning : signal "Raddr" should be named in CASE_LOWER case.
+            LMFE.v(32) : Warning : signal "nextRaddr" should be named in CASE_LOWER case.
+            LMFE.v(33) : Warning : signal "Raddrmod" should be named in CASE_LOWER case.
+            LMFE.v(34) : Warning : signal "nextRaddrmod" should be named in CASE_LOWER case.
+            LMFE.v(35) : Warning : signal "Waddr" should be named in CASE_LOWER case.
+            LMFE.v(36) : Warning : signal "nextWaddr" should be named in CASE_LOWER case.
+        21005 - Port names are lowercase letters(s) - 2 Warning(s)
+            LMFE.v(1) : Warning : port "Din" should be named in CASE_LOWER case.
+            LMFE.v(1) : Warning : port "Dout" should be named in CASE_LOWER case.
+        21015 - Consistent reset signal name(s) - 1 Warning(s)
+            LMFE.v(55) : Warning : reset signal name "reset" does not match to regular expression ".*rst.*".
+        21019 - For FSM variables, naming in <fsm_cs>, <fsm_ns>(s) - 1 Information(s)
+            LMFE.v(71) : Information : state register name "state" does not match to regular expression ".*_cs\>".
+        21023 - Consistent ordering of bits for describing multibit buses(s) - 2 Warning(s)
+            LMFE.v(37) : Warning : descending bit order and zero bound are not used for range declaration of "color".
+            LMFE.v(38) : Warning : descending bit order and zero bound are not used for range declaration of "nextcolor".
+        21029 - For asynchronous signals, end in _a(s) - 1 Information(s)
+            LMFE.v(55) : Information : asynchronous signal name "reset" does not match to regular expression ".*_a\>".
+        27373 - For FSM variables, naming in <fsm_cs>, <fsm_ns>(s) - 1 Information(s)
+            LMFE.v(71) : Information : next register name "nextstate" does not match to regular expression ".*_ns\>".
+    File Header -1 Warning(s)
+        29106 - Check file header format(s) - 1 Warning(s)
+            LMFE.v(1) : Warning : No comment is found
+    Comments -5 Error(s), 9 Information(s)
+        22032 - Use comments for port declarations(s) - 5 Error(s)
+            LMFE.v(2) : Error : comment is not found following port declaration.
+            LMFE.v(3) : Error : comment is not found following port declaration.
+            LMFE.v(4) : Error : comment is not found following port declaration.
+            LMFE.v(7) : Error : comment is not found following port declaration.
+            LMFE.v(8) : Error : comment is not found following port declaration.
+        22038 - Comment signal declarations(s) - 1 Information(s)
+            LMFE.v(5) : Information : signals should be declared one per line with a comment at the end.
+        29102 - Use comments for functional sections(s) - 8 Information(s)
+            LMFE.v(49) : Information : no comment is found before assign
+            LMFE.v(50) : Information : no comment is found before assign
+            LMFE.v(51) : Information : no comment is found before assign
+            LMFE.v(52) : Information : no comment is found before assign
+            LMFE.v(54) : Information : no comment is found before always
+            LMFE.v(88) : Information : no comment is found before always
+            LMFE.v(102) : Information : no comment is found before always
+            LMFE.v(178) : Information : no comment is found before always
+    Coding Style -185 Warning(s), 3 Information(s)
+        22021 - Use parentheses in complex equations(s) - 11 Warning(s)
+            LMFE.v(49) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((web == 0) ? Waddr : Raddr)".
+            LMFE.v(118) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((posx == 133) ? 0 : (posx + 1))".
+            LMFE.v(119) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((posx == 133) ? (posy + 1) : posy)".
+            LMFE.v(122) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((Waddr == 937) ? 0 : (Waddr + 1))".
+            LMFE.v(125) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((Raddrmod == (winx + 6)) ? (Raddr + 128) : (Raddr + 1))".
+            LMFE.v(126) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((Raddrmod == (winx + 6)) ? winx : (Raddrmod + 1))".
+            LMFE.v(131) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((colori == 48) ? 0 : (colori + 1))".
+            LMFE.v(137) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((winx == 127) ? 0 : (winx + 1))".
+            LMFE.v(169) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((posx == 133) ? 0 : (posx + 1))".
+            LMFE.v(170) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((posx == 133) ? (posy + 1) : posy)".
+            LMFE.v(173) : Warning : the operator precedence in the expression is suspicious; it is interpreted as "((Waddr == 937) ? 0 : (Waddr + 1))".
+        22025 - Keep line length within 72 characters(s) - 3 Information(s)
+            LMFE.v(47) : Information : line length should not exceed 72 characters.
+            LMFE.v(125) : Information : line length should not exceed 72 characters.
+            LMFE.v(126) : Information : line length should not exceed 72 characters.
+        22027 - Code should be aligned in a tabular format(s) - 48 Warning(s)
+            LMFE.v(2) : Warning : use 2 spaces for indentation.
+            LMFE.v(3) : Warning : use 2 spaces for indentation.
+            LMFE.v(4) : Warning : use 2 spaces for indentation.
+            LMFE.v(5) : Warning : use 2 spaces for indentation.
+            LMFE.v(6) : Warning : use 2 spaces for indentation.
+            LMFE.v(7) : Warning : use 2 spaces for indentation.
+            LMFE.v(8) : Warning : use 2 spaces for indentation.
+            LMFE.v(10) : Warning : use 2 spaces for indentation.
+            LMFE.v(11) : Warning : use 2 spaces for indentation.
+            LMFE.v(12) : Warning : use 2 spaces for indentation.
+            LMFE.v(13) : Warning : use 2 spaces for indentation.
+            LMFE.v(15) : Warning : use 2 spaces for indentation.
+            LMFE.v(16) : Warning : use 2 spaces for indentation.
+            LMFE.v(17) : Warning : use 2 spaces for indentation.
+            LMFE.v(18) : Warning : use 2 spaces for indentation.
+            LMFE.v(19) : Warning : use 2 spaces for indentation.
+            LMFE.v(20) : Warning : use 2 spaces for indentation.
+            LMFE.v(21) : Warning : use 2 spaces for indentation.
+            LMFE.v(22) : Warning : use 2 spaces for indentation.
+            LMFE.v(23) : Warning : use 2 spaces for indentation.
+            LMFE.v(24) : Warning : use 2 spaces for indentation.
+            LMFE.v(25) : Warning : use 2 spaces for indentation.
+            LMFE.v(26) : Warning : use 2 spaces for indentation.
+            LMFE.v(27) : Warning : use 2 spaces for indentation.
+            LMFE.v(28) : Warning : use 2 spaces for indentation.
+            LMFE.v(29) : Warning : use 2 spaces for indentation.
+            LMFE.v(30) : Warning : use 2 spaces for indentation.
+            LMFE.v(31) : Warning : use 2 spaces for indentation.
+            LMFE.v(32) : Warning : use 2 spaces for indentation.
+            LMFE.v(33) : Warning : use 2 spaces for indentation.
+            LMFE.v(34) : Warning : use 2 spaces for indentation.
+            LMFE.v(35) : Warning : use 2 spaces for indentation.
+            LMFE.v(36) : Warning : use 2 spaces for indentation.
+            LMFE.v(37) : Warning : use 2 spaces for indentation.
+            LMFE.v(38) : Warning : use 2 spaces for indentation.
+            LMFE.v(42) : Warning : use 2 spaces for indentation.
+            LMFE.v(43) : Warning : use 2 spaces for indentation.
+            LMFE.v(44) : Warning : use 2 spaces for indentation.
+            LMFE.v(45) : Warning : use 2 spaces for indentation.
+            LMFE.v(47) : Warning : use 2 spaces for indentation.
+            LMFE.v(49) : Warning : use 2 spaces for indentation.
+            LMFE.v(50) : Warning : use 2 spaces for indentation.
+            LMFE.v(51) : Warning : use 2 spaces for indentation.
+            LMFE.v(52) : Warning : use 2 spaces for indentation.
+            LMFE.v(54) : Warning : use 2 spaces for indentation.
+            LMFE.v(88) : Warning : use 2 spaces for indentation.
+            LMFE.v(102) : Warning : use 2 spaces for indentation.
+            LMFE.v(178) : Warning : use 2 spaces for indentation.
+        22029 - Use space instead of tab stops for code indentation(s) - 122 Warning(s)
+            LMFE.v(55) : Warning : should not use TAB for indentation.
+            LMFE.v(56) : Warning : should not use TAB for indentation.
+            LMFE.v(57) : Warning : should not use TAB for indentation.
+            LMFE.v(58) : Warning : should not use TAB for indentation.
+            LMFE.v(59) : Warning : should not use TAB for indentation.
+            LMFE.v(60) : Warning : should not use TAB for indentation.
+            LMFE.v(61) : Warning : should not use TAB for indentation.
+            LMFE.v(62) : Warning : should not use TAB for indentation.
+            LMFE.v(63) : Warning : should not use TAB for indentation.
+            LMFE.v(64) : Warning : should not use TAB for indentation.
+            LMFE.v(65) : Warning : should not use TAB for indentation.
+            LMFE.v(66) : Warning : should not use TAB for indentation.
+            LMFE.v(67) : Warning : should not use TAB for indentation.
+            LMFE.v(68) : Warning : should not use TAB for indentation.
+            LMFE.v(69) : Warning : should not use TAB for indentation.
+            LMFE.v(70) : Warning : should not use TAB for indentation.
+            LMFE.v(71) : Warning : should not use TAB for indentation.
+            LMFE.v(72) : Warning : should not use TAB for indentation.
+            LMFE.v(73) : Warning : should not use TAB for indentation.
+            LMFE.v(74) : Warning : should not use TAB for indentation.
+            LMFE.v(75) : Warning : should not use TAB for indentation.
+            LMFE.v(76) : Warning : should not use TAB for indentation.
+            LMFE.v(77) : Warning : should not use TAB for indentation.
+            LMFE.v(78) : Warning : should not use TAB for indentation.
+            LMFE.v(79) : Warning : should not use TAB for indentation.
+            LMFE.v(80) : Warning : should not use TAB for indentation.
+            LMFE.v(81) : Warning : should not use TAB for indentation.
+            LMFE.v(82) : Warning : should not use TAB for indentation.
+            LMFE.v(83) : Warning : should not use TAB for indentation.
+            LMFE.v(84) : Warning : should not use TAB for indentation.
+            LMFE.v(85) : Warning : should not use TAB for indentation.
+            LMFE.v(89) : Warning : should not use TAB for indentation.
+            LMFE.v(90) : Warning : should not use TAB for indentation.
+            LMFE.v(91) : Warning : should not use TAB for indentation.
+            LMFE.v(92) : Warning : should not use TAB for indentation.
+            LMFE.v(93) : Warning : should not use TAB for indentation.
+            LMFE.v(94) : Warning : should not use TAB for indentation.
+            LMFE.v(95) : Warning : should not use TAB for indentation.
+            LMFE.v(96) : Warning : should not use TAB for indentation.
+            LMFE.v(97) : Warning : should not use TAB for indentation.
+            LMFE.v(98) : Warning : should not use TAB for indentation.
+            LMFE.v(99) : Warning : should not use TAB for indentation.
+            LMFE.v(103) : Warning : should not use TAB for indentation.
+            LMFE.v(104) : Warning : should not use TAB for indentation.
+            LMFE.v(105) : Warning : should not use TAB for indentation.
+            LMFE.v(106) : Warning : should not use TAB for indentation.
+            LMFE.v(107) : Warning : should not use TAB for indentation.
+            LMFE.v(108) : Warning : should not use TAB for indentation.
+            LMFE.v(109) : Warning : should not use TAB for indentation.
+            LMFE.v(110) : Warning : should not use TAB for indentation.
+            LMFE.v(111) : Warning : should not use TAB for indentation.
+            LMFE.v(112) : Warning : should not use TAB for indentation.
+            LMFE.v(113) : Warning : should not use TAB for indentation.
+            LMFE.v(114) : Warning : should not use TAB for indentation.
+            LMFE.v(115) : Warning : should not use TAB for indentation.
+            LMFE.v(116) : Warning : should not use TAB for indentation.
+            LMFE.v(117) : Warning : should not use TAB for indentation.
+            LMFE.v(118) : Warning : should not use TAB for indentation.
+            LMFE.v(119) : Warning : should not use TAB for indentation.
+            LMFE.v(120) : Warning : should not use TAB for indentation.
+            LMFE.v(121) : Warning : should not use TAB for indentation.
+            LMFE.v(122) : Warning : should not use TAB for indentation.
+            LMFE.v(123) : Warning : should not use TAB for indentation.
+            LMFE.v(124) : Warning : should not use TAB for indentation.
+            LMFE.v(125) : Warning : should not use TAB for indentation.
+            LMFE.v(126) : Warning : should not use TAB for indentation.
+            LMFE.v(127) : Warning : should not use TAB for indentation.
+            LMFE.v(128) : Warning : should not use TAB for indentation.
+            LMFE.v(129) : Warning : should not use TAB for indentation.
+            LMFE.v(130) : Warning : should not use TAB for indentation.
+            LMFE.v(131) : Warning : should not use TAB for indentation.
+            LMFE.v(132) : Warning : should not use TAB for indentation.
+            LMFE.v(133) : Warning : should not use TAB for indentation.
+            LMFE.v(134) : Warning : should not use TAB for indentation.
+            LMFE.v(135) : Warning : should not use TAB for indentation.
+            LMFE.v(136) : Warning : should not use TAB for indentation.
+            LMFE.v(137) : Warning : should not use TAB for indentation.
+            LMFE.v(138) : Warning : should not use TAB for indentation.
+            LMFE.v(139) : Warning : should not use TAB for indentation.
+            LMFE.v(140) : Warning : should not use TAB for indentation.
+            LMFE.v(141) : Warning : should not use TAB for indentation.
+            LMFE.v(142) : Warning : should not use TAB for indentation.
+            LMFE.v(143) : Warning : should not use TAB for indentation.
+            LMFE.v(144) : Warning : should not use TAB for indentation.
+            LMFE.v(145) : Warning : should not use TAB for indentation.
+            LMFE.v(146) : Warning : should not use TAB for indentation.
+            LMFE.v(147) : Warning : should not use TAB for indentation.
+            LMFE.v(148) : Warning : should not use TAB for indentation.
+            LMFE.v(149) : Warning : should not use TAB for indentation.
+            LMFE.v(150) : Warning : should not use TAB for indentation.
+            LMFE.v(151) : Warning : should not use TAB for indentation.
+            LMFE.v(152) : Warning : should not use TAB for indentation.
+            LMFE.v(153) : Warning : should not use TAB for indentation.
+            LMFE.v(154) : Warning : should not use TAB for indentation.
+            LMFE.v(155) : Warning : should not use TAB for indentation.
+            LMFE.v(156) : Warning : should not use TAB for indentation.
+            LMFE.v(157) : Warning : should not use TAB for indentation.
+            LMFE.v(158) : Warning : should not use TAB for indentation.
+            LMFE.v(159) : Warning : should not use TAB for indentation.
+            LMFE.v(160) : Warning : should not use TAB for indentation.
+            LMFE.v(161) : Warning : should not use TAB for indentation.
+            LMFE.v(162) : Warning : should not use TAB for indentation.
+            LMFE.v(163) : Warning : should not use TAB for indentation.
+            LMFE.v(164) : Warning : should not use TAB for indentation.
+            LMFE.v(165) : Warning : should not use TAB for indentation.
+            LMFE.v(166) : Warning : should not use TAB for indentation.
+            LMFE.v(167) : Warning : should not use TAB for indentation.
+            LMFE.v(168) : Warning : should not use TAB for indentation.
+            LMFE.v(169) : Warning : should not use TAB for indentation.
+            LMFE.v(170) : Warning : should not use TAB for indentation.
+            LMFE.v(171) : Warning : should not use TAB for indentation.
+            LMFE.v(172) : Warning : should not use TAB for indentation.
+            LMFE.v(173) : Warning : should not use TAB for indentation.
+            LMFE.v(174) : Warning : should not use TAB for indentation.
+            LMFE.v(175) : Warning : should not use TAB for indentation.
+            LMFE.v(179) : Warning : should not use TAB for indentation.
+            LMFE.v(180) : Warning : should not use TAB for indentation.
+            LMFE.v(181) : Warning : should not use TAB for indentation.
+            LMFE.v(182) : Warning : should not use TAB for indentation.
+            LMFE.v(183) : Warning : should not use TAB for indentation.
+            LMFE.v(184) : Warning : should not use TAB for indentation.
+            LMFE.v(185) : Warning : should not use TAB for indentation.
+        29100 - Preserve port order(s) - 4 Warning(s)
+            LMFE.v(4) : Warning : IO declaration "in_en" is not in order with its port declaration.
+            LMFE.v(5) : Warning : IO declaration "busy" is not in order with its port declaration.
+            LMFE.v(6) : Warning : IO declaration "out_valid" is not in order with its port declaration.
+            LMFE.v(7) : Warning : IO declaration "Din" is not in order with its port declaration.
+    Synthesis -8 Warning(s)
+        27417 - Avoid top level glue logic(s) - 8 Warning(s)
+            LMFE.v(49) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(50) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(51) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(52) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(54) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(88) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(102) : Warning : glue logic should not be allowed in top module.
+            LMFE.v(178) : Warning : glue logic should not be allowed in top module.
+    Design For Test -1 Information(s)
+        25003 - Avoid floating output(s) - 1 Information(s)
+            LMFE.v(4) : Information : signal "in_en" has no load.
+    Design Style -1 Warning(s)
+        25015 - Output signals must be registered(s) - 1 Warning(s)
+            LMFE.v(1) : Warning : the output "busy" is not registered.

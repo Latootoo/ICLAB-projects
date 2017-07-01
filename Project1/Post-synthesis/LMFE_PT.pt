@@ -1,0 +1,40 @@
+set search_path ". /theda21_2/CBDK_IC_Contest/cur/SynopsysDC/db /usr/synopsys/synthesis/cur/libraries/syn $search_path"
+set link_path {* slow.db fast.db sram_1024x8_t13_slow_syn.db}
+
+read_verilog LMFE_syn.v
+current_design LMFE
+link_design
+set_operating_conditions -min slow -max slow
+
+create_clock -period 10 -waveform {0 5} [get_ports  clk]
+set_dont_touch_network      [get_clocks clk]
+set_clock_transition -rise 0.1 [get_clocks {clk}]
+set_clock_transition -fall 0.1 [get_clocks {clk}]
+set_clock_uncertainty  0.1  [get_clocks clk]
+set_clock_latency 0.5 [get_clocks {clk}]
+
+set_input_delay  5      -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+set_output_delay 0.5    -clock clk [all_outputs] 
+set_load         1     [all_outputs]
+set_drive        1     [all_inputs]                  
+
+set_max_fanout 20 [current_design]
+
+set_wire_load_model -name tsmc13_wl10 -library slow
+
+set_dont_touch_network [list clk reset]
+set_drive 0 [list clk reset]
+                       
+read_sdf LMFE.sdf
+
+report_clock > clock.rpt
+report_port -input_delay >> clock.rpt
+report_port -output_delay >> clock.rpt
+check_timing >> clock.rpt
+
+report_constraint -all_violators > timing.rpt
+report_timing >> timing.rpt
+report_timing -nets -transition_time -capacitance >> timing.rpt
+report_timing -nworst 10 -path_type summary >> timing.rpt
+
+exit
